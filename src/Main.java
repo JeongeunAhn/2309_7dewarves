@@ -10,9 +10,9 @@ public class Main {
 		int temp=0;
 		int remember=0,remember2=0;
 		for(int i=0;i<9;i++) {
-			numbers.add(sc.nextInt()); //9�� �Է� �ޱ�
+			numbers.add(sc.nextInt()); //9개 입력 받기
 		}
-
+		//다중루프 탈출을 위해 루프 이름 달기
 		breakOut:
 			for(int i=0;i<9;i++) {
 				remember = numbers.get(i);
@@ -33,7 +33,7 @@ public class Main {
 				numbers.add(i,remember);
 			}
 
-
+		//오름 차순 정렬을 위해 버블 정렬 사용
 		int l=0,check=0;
 		while(true){
 			if(numbers.get(l)>numbers.get(l+1)) {
@@ -47,7 +47,7 @@ public class Main {
 			if(l==6) l=0;
 			if(check==6) break;
 		}
-
+		//
 		for (int index = 0; index < numbers.size(); index++) {
 			System.out.println(numbers.get(index));
 		}
